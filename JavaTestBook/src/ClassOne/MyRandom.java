@@ -2,8 +2,6 @@ package ClassOne;
 
 import java.util.Random;
 import java.util.Scanner;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Created by dela on 10/22/17.
@@ -27,9 +25,5 @@ public class MyRandom {
         }
 
         System.out.print(result);
-
-        Map map = new HashMap();
-        HashMap a = new HashMap();
-        a = (HashMap)map;
     }
 }
