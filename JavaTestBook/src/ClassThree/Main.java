@@ -1,38 +1,33 @@
 package ClassThree;
 
+
+import java.util.Scanner;
+
 /**
- * Created by dela on 11/18/17.
+ * Created by dela on 11/20/17.
  */
 
-class Point{
-    private double x;
-    private double y;
+interface ClassName {
+    String getClassName();
+}
 
-    public Point(double x, double y){
-        this.x = x;
-        this.y = y;
+class Company implements ClassName {
+    private String name;
+
+    public Company(String name) {
+        this.name = name;
     }
 
-    public double distance(Point o){
-        return Math.abs(o.x - o.y);
-    }
-
-    public double getX() {
-        return x;
-    }
-
-    public void setX(double x) {
-        this.x = x;
-    }
-
-    public double getY() {
-        return y;
-    }
-
-    public void setY(double y) {
-        this.y = y;
+    @Override
+    public String getClassName() {
+        return name;
     }
 }
 
 public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Company company = new Company(scanner.next());
+        System.out.println("name=" + company.getClassName());
+    }
 }
