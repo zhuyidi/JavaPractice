@@ -29,5 +29,6 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Company company = new Company(scanner.next());
         System.out.println("name=" + company.getClassName());
+
     }
 }
